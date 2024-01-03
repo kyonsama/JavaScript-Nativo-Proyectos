@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;300&family=Roboto+Slab:wght@700;800&display=swap');
+
+:root {
+  --title-font-family-primary: 'Roboto slab', serif;
+  --title-weight: bold;
+  --paragraph-primary-font-family: 'catamaran', sans-serif;
+  --paragraph-weight: light;
+  --complementary-color: #24CFDB;
+  --background-color: #fff;
+  --Shadows-color:#E2E2E2;
+  --text-color: #000;
+  --text-color-secondary: #F0F0F0; 
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--background-color);
+}
+h1,h2,h3,h4{
+  font-family: var(--title-font-family-primary);
+  font-weight: var(--title-weight);
+  color: var(--text-color);
+}
+p {
+  font-family: var(--paragraph-primary-font-family);
+  font-weight: var(--paragraph-weight); 
+  color: var(--text-color-secondary);
+}
+
+.nav {
+  width: 100vw;
+  height: auto;
+  box-shadow: -7px 1px 5px 6px rgba(226,226,226,0.79);
+  overflow: hidden;
+}
+
+
+.nav--logo {
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2rem;
+}
+
+.nav--logo .nav--img--logo {
+  height: 100%;
+  width: 60%;
+  margin-left: 0.8rem;
+  background-image: url('./assets/logo.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.nav--logo .nav--icon__menu {
+  width: 10%;
+  height: 100%;
+  margin-right: 1rem;
+  background-image: url('./assets/menu_FILL0_wght400_GRAD0_opsz24.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.nav--list {
+  width: 100%;
+  visibility: hidden;
+  height: 0;
+  font-size: 2.8rem;
+  transition: visibility 1s ease-in-out 0.5s,
+  height 1s ease-out 0.5s
+}
+.nav--toggle__active{
+  height: 20rem;
+  visibility: visible;
+}
+
+.nav--list .nav--list--item{
+  list-style: none;
+  height: 20%;
+  text-align: start;
+  margin: 1rem 0;
+}
+.nav--list .nav--list--item:hover{
+  background-color: var(--Shadows-color);
+}
+
+.nav--list--item .nav--item--link {
+  margin: 0rem 1rem;
+  color: var(--complementary-color);
+  text-decoration: none;
+}
+
+.nav--list--item .nav--item--link:hover {
+  color: var(--complementary-color);
+}
